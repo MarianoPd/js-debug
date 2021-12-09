@@ -34,11 +34,13 @@ export default {
         },
         startGenreSearch(genreToSearch) {
             console.log(genreToSearch);
-            //genreToSearch = "";  qui il dato ricevuto da Header viene azzerato
+            //genreToSearch = "";  qui il dato ricevuto da Header viene azzerato va invece azzerato l'altro dato di app
+            this.authorToSearch = "";
             this.genreToSearch = genreToSearch;
         },
         startAuthorSearch(authorToSearch) {
             console.log(authorToSearch);
+            this.genreToSearch = ""; // va azzerato per consentire la selezione solo per autore
             this.authorToSearch = authorToSearch;
         }
     },
