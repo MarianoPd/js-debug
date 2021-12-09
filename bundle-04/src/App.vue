@@ -25,8 +25,9 @@ export default {
         };
     },
     methods: {
+        // riceve da main un oggetto con genres e authors e ne salva il risultato in data
         getGenresAndAuthorsList(allGenresAndAuthors) {
-            allGenresAndAuthors = {};
+            //allGenresAndAuthors = {};   così si azzera cio che viene ricevuto da Main
             this.genresList = allGenresAndAuthors.genres;
             this.authorsList = allGenresAndAuthors.authors;
         },
