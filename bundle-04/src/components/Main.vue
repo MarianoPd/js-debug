@@ -1,6 +1,6 @@
 <template>
     <main class="container mt-5">
-        <div class="d-flex flex-wrap">
+        <div class="row flex-wrap g-5">  <!--manca la row  e il gutter-->
             <Disc
                 v-for="(discItem, index) in filteredDiscs"
                 :key="index"
