@@ -1,6 +1,7 @@
 <template>
     <div id="app">
-        <Header :genres="genresList" :authors="authorsList" @changedGenre="startGenreSearch" @chaangedAuthor="startAuthorSearch" />
+        <!-- changedAuthor e changedGenere erano scritti diversamente che dall'Header  -->
+        <Header :genres="genresList" :authors="authorsList" @changedGenere="startGenreSearch" @changedAuthor="startAuthorSearch" />
 
         <Main :selectedGenre="genreToSearch" :selectedAuthor="authorToSearch" @genresAndAuthorsReady="getGenresAndAuthorsList" />
     </div>
@@ -33,7 +34,7 @@ export default {
         },
         startGenreSearch(genreToSearch) {
             console.log(genreToSearch);
-            genreToSearch = "";
+            //genreToSearch = "";  qui il dato ricevuto da Header viene azzerato
             this.genreToSearch = genreToSearch;
         },
         startAuthorSearch(authorToSearch) {

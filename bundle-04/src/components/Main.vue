@@ -49,7 +49,6 @@ export default {
             .then((res) => {
                 let discs = {};
                 this.discs = res.data.response;
-                console.log(this.discs);
                 this.discs.forEach((disc) => {
                     if (!this.genres.includes(disc.genre)) { //if (!this.discs.includes(disc.genre)) {
                         this.genres.push(disc.genre);
