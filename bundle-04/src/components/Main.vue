@@ -42,15 +42,16 @@ export default {
             authors: [],
         };
     },
-    created() {
+    created() {  
+        //crea la lista dei dischi da quella crea la lista dei generi e quella degli autori
         axios
             .get("https://flynn.boolean.careers/exercises/api/array/music")
             .then((res) => {
                 let discs = {};
                 this.discs = res.data.response;
-
+                console.log(this.discs);
                 this.discs.forEach((disc) => {
-                    if (!this.discs.includes(disc.genre)) {
+                    if (!this.genres.includes(disc.genre)) { //if (!this.discs.includes(disc.genre)) {
                         this.genres.push(disc.genre);
                     }
 

@@ -4,6 +4,7 @@
             <img src="../assets/img/spotify-logo.png" alt="Spotify" />
         </div>
         <div>
+            <!-- crea una option per ogni genre -->
             <select
                 v-model="genreFilter"
                 @change="$emit('changedGenere', genreFilter)"
@@ -20,6 +21,7 @@
             </select>
         </div>
         <div>
+            <!-- crea una option per ogni authot -->
             <select
                 v-model="authorFilter"
                 @change="$emit('changedAuthor', authorFilter)"
@@ -31,7 +33,7 @@
                     :key="index"
                     :value="author"
                 >
-                    {{ genre }}
+                    {{ author }}   <!-- {{ genre }} -->
                 </option>
             </select>
 
